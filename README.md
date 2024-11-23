@@ -5,13 +5,12 @@ char board[3][3];
 int x, y, i;
 
 void printfboard() {
-    // Print the current state of the board
     printf(" %c     | %c      |  %c  \n", board[0][0], board[0][1], board[0][2]);
-    printf("---   | ---   |  --- \n");
-    printf(" %c     | %c     |  %c  \n", board[1][0], board[1][1], board[1][2]);
-    printf("---   | ---   |  --- \n");
+    printf("---    | ---    |  --- \n");
+    printf(" %c     | %c      |  %c  \n", board[1][0], board[1][1], board[1][2]);
+    printf("---    | ---    |  --- \n");
     printf(" %c     | %c      |  %c  \n", board[2][0], board[2][1], board[2][2]);
-    printf("---   | ---   |  --- \n");
+    printf("---    | ---    |  --- \n");
 }
 
 int Xwinnerchecker() {
@@ -25,9 +24,9 @@ int Xwinnerchecker() {
         (board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == 'X') ||
         (board[0][2] == 'X' && board[1][2] == 'X' && board[2][2] == 'X')) {
         printf("X IS THE WINNER\n");
-        return 1;  // Return 1 if X wins
+        return 1;
     }
-    return 0;  // Return 0 if X doesn't win
+    return 0;
 }
 
 int Owinnerchecker() {
